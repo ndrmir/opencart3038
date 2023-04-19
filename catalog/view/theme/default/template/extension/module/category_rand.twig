@@ -5,8 +5,8 @@
       <div class="row">
     {% endif %}  
       <div class="col-md-3">
-        
-        <div class="">
+        <div class="center-block col-centered">
+        <div>
           {% if category.thumb %}
             <img src="{{ category.thumb }}" alt="{{ category.name }}" title="{{ category.name }}" class="img-thumbnail" style="margin: 0.1rem" />
           {% endif %}
@@ -19,6 +19,7 @@
           {% endfor %}
         {% endif %}
         </ul>
+        </div>
       </div>
 
     {% if (key + 1) % 4 == 0 %}

@@ -821,3 +821,6 @@ html[dir=rtl] #cart .dropdown-menu {
 .categories-rand .img-thumbnail {
 	border: none;
 }
+.col-centered{
+    width: 10rem;
+}
