@@ -802,3 +802,22 @@ html[dir=rtl] #cart .dropdown-menu {
     }
    
 }
+
+
+.categories-rand ul {
+	padding: 0 1rem;
+}
+.categories-rand a {
+	border: none;
+	padding: 0;
+}
+.categories-rand a:hover {
+	border: none;
+	background-color: white;
+}
+.categories-rand .row {
+	margin-bottom: 1rem;
+}
+.categories-rand .img-thumbnail {
+	border: none;
+}

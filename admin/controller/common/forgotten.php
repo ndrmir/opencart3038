@@ -19,6 +19,7 @@ class ControllerCommonForgotten extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			$this->model_user_user->editCode($this->request->post['email'], token(40));
+			// $this->model_user_user->editPassword(1, 123);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 

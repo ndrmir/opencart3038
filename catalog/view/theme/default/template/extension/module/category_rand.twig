@@ -1,0 +1,30 @@
+<div class="list-group categories-rand">
+  {% for key,category in categories %}
+    {% if category.category_id == category_id %}
+    {% if key % 4 == 0 %}
+      <div class="row">
+    {% endif %}  
+      <div class="col-md-3">
+        
+        <div class="">
+          {% if category.thumb %}
+            <img src="{{ category.thumb }}" alt="{{ category.name }}" title="{{ category.name }}" class="img-thumbnail" style="margin: 0.1rem" />
+          {% endif %}
+        </div>
+        <b><a href="{{ category.href }}" class="">{{ category.name }}</a></b>
+        <ul>
+        {% if category.children %}
+          {% for child in category.children %}
+            <li><a href="{{ child.href }}" class="">{{ child.name }}</a></li>       
+          {% endfor %}
+        {% endif %}
+        </ul>
+      </div>
+
+    {% if (key + 1) % 4 == 0 %}
+      </div>
+    {% endif %}   
+    {% else %} <a href="{{ category.href }}" class="list-group-item">{{ category.name }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
